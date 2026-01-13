@@ -308,7 +308,7 @@ footer{
 }
 
 
-/* medium device */
+/* medium device start*/
 @media screen and (min-width: 576.98px) and (max-width: 992px) {
     .container{
         max-width: 960px;
@@ -355,7 +355,7 @@ footer{
 
 }
 
-/* small device */
+/* small device start*/
 @media screen and (max-width: 576px) {
     .container{
         width: 100%;
