@@ -46,6 +46,20 @@ a{
     color: #FF900E;
 }
 
+.section_title h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+    padding-bottom: 24px;
+}
+
+.section_title p{
+    font-size: 1rem;
+    color: #727272;
+    max-width: 542px;
+    line-height: 26px;    
+}
+
 .btn{
     display: inline-block;
     padding: 20px 25px;
@@ -166,6 +180,73 @@ header{
 }
 
 
+/* facts area */
+.fact_wrapper{
+    margin-top: 130px;
+}
+.facts_row{
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    justify-content: space-around;
+}
+
+.facts {
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    padding: 45px 10px 60px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.facts h3{
+    font-size: 45px;
+    font-weight: 600;
+    padding: 10px 0 5px;
+}
+
+.facts p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #727272;
+}
+
+/* sponsor area */
+.sponsor_wrapper{
+    padding-top: 180px;
+}
+.sponsor_wrapper .section_title{
+    max-width: 542px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsor_images{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.sponsor_images img{
+    filter: grayscale(100%);
+}
+
+/* footer area */
+footer{
+    margin-bottom: 100px;
+}
+.footer_text{
+    background-color: #FFF4E7;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 160px;
+}
+
+.footer_text small{
+    font-size: 1.25rem;
+    color: #424242;
+}
+
 
 /* medium device */
 @media screen and (min-width: 576.98px) and (max-width: 992px) {
@@ -193,17 +274,47 @@ header{
     .team_images {
         margin-left: 0;
     }
+
+    .facts_row{
+        grid-template-columns: repeat(2, 240px);
+    }
+
+    .fact_wrapper .section_title{
+        text-align: center;
+    }
+
+    .section_title p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sponsor_images{
+        grid-template-columns: repeat(3, auto);
+        justify-content: start;
+    }
+
 }
 
 /* small device */
 @media screen and (max-width: 576px) {
+    .container{
+        width: 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
    .menu {
         flex-direction: column;
         gap: 20px;
     }
 
     .navbar{
+        gap: 1.5rem;
         flex-wrap: wrap;
+    }
+
+    .banner {
+        padding-top: 0px;
     }
 
     .banner_content h1 {
@@ -217,9 +328,29 @@ header{
     }
     .team_images {
         margin-left: 0;
+        width: 100%;
+    }
+
+    .team_images img {
+        width: 100%;
     }
 
     .team_images{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .facts_row{
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 10px;
+    }
+
+    .facts{
+        margin-top: 20px;
+    }
+
+    .sponsor_images{
+        grid-template-columns: repeat(2, auto);
+        justify-items: center;
+        gap: 40px;
     }
 }
